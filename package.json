@@ -25,18 +25,18 @@
   },
   "homepage": "https://wjuniori.github.io/",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.5.0",
-    "bootstrap": "^4.1.3",
-    "jquery": "^3.3.1"
+    "@fortawesome/fontawesome-free": "5.5.0",
+    "bootstrap": "4.1.3",
+    "jquery": "3.3.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "2.26.3",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-notify": "^3.2.0",
-    "gulp-uglify": "^3.0.1"
+    "gulp-clean-css": "4.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-imagemin": "5.0.3",
+    "gulp-notify": "3.2.0",
+    "gulp-uglify": "3.0.1"
   }
 }
