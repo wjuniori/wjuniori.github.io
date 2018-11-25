@@ -60,12 +60,12 @@ header {
   }
 }
 
-header a {
+header a, footer a {
   color: #fff;
 }
 
 /* header a:active, header a:focus, */
-header a:hover {
+header a:hover, footer a:hover {
   text-decoration: none;
   color: #f35f19;
 }
@@ -147,3 +147,5 @@ h2 {
 .portfolio-item .card .card-footer i {
   margin-right: 3px;
 }
+
+/* ********** FOOTER ********** */
