@@ -10,7 +10,6 @@
 - Preto:
     #000000; rgb(0,0,0)
     #322f3a; rgb(50,47,58)
-    #212529; rgb(33,37,41)
     .bg-dark: #343a40; rgb(52,58,64)
 - Laranja: #f35f19; rgb(243,95,25)
 - Cinza:
@@ -20,6 +19,10 @@
     .text-muted #6c757d; rgb(108,117,125)
 
 */
+
+body {
+  color: #343a40;
+}
 
 /* ********** NAVIGATION BAR ********** */
 
@@ -127,19 +130,19 @@ header {
   }
 }
 
-.info-card h1, .info-card h4, .card-body h4, #bar-portfolio h4, #portfolio h2 {
+.info-card h1, .info-card h4, .card-body h4, #bar-portfolio h4, h2 {
   font-weight: bold;
 }
 
-.info-card .link-social {
-  font-size: 2rem;
+.list-icons {
+  font-size: 2.5rem;
 }
 
 header a, footer a {
   color: #fff;
 }
 
-header a:hover, footer a:hover {
+header a:hover, footer a:hover, #recursos .list-icons i:hover {
   text-decoration: none;
   color: #f35f19;
 }
@@ -152,18 +155,17 @@ header a:hover, footer a:hover {
   -ms-transform: translate(-50%,0%);
 }
 
-.btn-tertiary, .btn-tertiary:focus {
+#bar-portfolio h4, .btn-tertiary, .btn-tertiary:focus {
   border: 0;
   font-weight: 700;
   box-shadow: 0 3px 3px 0 rgba(0,0,0,.1);
-  transition: all 0.15s ease-in-out;
-  color: #212529;
+  color: #343a40;
   background-color: #fff;
 }
 
-.btn-tertiary:hover {
-  color: #212529;
-  background-color: #ececec;
+#bar-portfolio h4 {
+  padding: .375rem .75rem;
+  border-radius: .25rem;
 }
 
 /* ********** PORTFOLIO SECTION ********** */
@@ -178,10 +180,17 @@ h2 {
   margin-bottom: 30px;
 }
 
-.star-primary {
+hr {
+  border-top: 3px solid #343a40;
+}
+
+.divider-primary {
   width: 200px;
-  border-top: 3px solid #000;
   float: left;
+}
+
+.divider-secondary {
+  max-width: 50%;
 }
 
 .portfolio-item {
@@ -212,12 +221,40 @@ h2 {
   background: 0 0;
 }
 
+.btn-tertiary, .btn-tertiary:focus {
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-tertiary:hover {
+  color: #343a40;
+  background-color: #ececec;
+}
+
 .portfolio-item .card .card-footer .btn-tertiary {
   font-size: 11px;
 }
 
 .portfolio-item .card .card-footer i {
   margin-right: 3px;
+}
+
+/* ********** RECURSOS SECTION ********** */
+
+#recursos {
+  padding-bottom: 30px;
+}
+
+.list-tags li {
+  color: #fff;
+  background-color: #343a40;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.list-tags li:hover {
+  background-color: #f35f19;
 }
 
 /* ********** FOOTER ********** */
