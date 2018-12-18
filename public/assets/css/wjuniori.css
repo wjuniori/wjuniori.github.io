@@ -251,6 +251,7 @@ hr {
   padding-left: 8px;
   border-radius: 5px;
   font-weight: bold;
+  cursor: default;
 }
 
 .list-tags li:hover {
