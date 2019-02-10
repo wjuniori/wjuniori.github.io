@@ -21,6 +21,7 @@
 */
 
 body {
+  font-family: "Lato", sans-serif;
   color: #343a40;
 }
 
@@ -36,7 +37,7 @@ body {
   color: #fff;
   background: rgba(52, 58, 64, 0.5);
   line-height: 50px;
-  z-index: 999;
+  z-index: 2;
 }
 
 .menu-toggle:hover {
@@ -46,14 +47,19 @@ body {
 
 #sidebar-wrapper {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   right: 0;
   width: 250px;
   height: 100%;
   transition: all 0.4s ease 0s;
   -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
   transform: translateX(250px);
   -webkit-transform: translateX(250px);
+  -ms-transform: translateX(250px);
+  -moz-transform: translateX(250px);
+  -o-transform: translateX(250px);
   background: #6c757d;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -68,9 +74,10 @@ body {
   width: 250px;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-.sidebar-nav, .sidebar-nav ul {
+.sidebar-nav ul {
   list-style: none;
 }
 
@@ -97,7 +104,7 @@ body {
   background: none;
 }
 
-.sidebar-nav li.sidebar-nav-item a {
+.sidebar-nav-item a {
   display: block;
   padding: 15px;
 }
@@ -118,19 +125,9 @@ header {
   border: 7px solid #322f3a;
 }
 
-/* md >= 768px */
-@media screen and (min-width: 768px) {
-  .info-card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding-left: 10px;
-  }
-}
-
-.info-card h1, .info-card h4, .card-body h4, #bar-portfolio h4, h2 {
+h1,
+h2,
+h4 {
   font-weight: bold;
 }
 
@@ -138,11 +135,14 @@ header {
   font-size: 2.5rem;
 }
 
-header a, footer a {
+header a,
+footer a {
   color: #fff;
 }
 
-header a:hover, footer a:hover, #recursos .list-icons i:hover {
+header a:hover,
+footer a:hover,
+.list-icons i:hover {
   text-decoration: none;
   color: #f35f19;
 }
@@ -152,20 +152,15 @@ header a:hover, footer a:hover, #recursos .list-icons i:hover {
   left: 50%;
   bottom: -16px;
   transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%,0%);
   -ms-transform: translate(-50%,0%);
-}
-
-#bar-portfolio h4, .btn-tertiary, .btn-tertiary:focus {
-  border: 0;
-  font-weight: 700;
-  box-shadow: 0 3px 3px 0 rgba(0,0,0,.1);
+  -moz-transform: translate(-50%,0%);
+  -o-transform: translate(-50%,0%);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1);
   color: #343a40;
   background-color: #fff;
-}
-
-#bar-portfolio h4 {
-  padding: .375rem .75rem;
-  border-radius: .25rem;
 }
 
 /* ********** PORTFOLIO SECTION ********** */
@@ -176,10 +171,6 @@ header a:hover, footer a:hover, #recursos .list-icons i:hover {
 
 /* ********** PORTFOLIO-WEBSITES AND PORTFOLIO-GAMES SECTIONS ********** */
 
-h2 {
-  margin-bottom: 30px;
-}
-
 hr {
   border-top: 3px solid #343a40;
 }
@@ -189,39 +180,49 @@ hr {
   float: left;
 }
 
-.divider-secondary {
-  max-width: 50%;
+h2 {
+  margin-bottom: 30px;
+}
+
+.clear-left {
+  clear: left;
 }
 
 .portfolio-item {
   margin-bottom: 30px;
 }
 
-.portfolio-item .card {
+.card {
   border: 1px solid #ededed;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
   background: #f5f5f5;
 }
 
-.portfolio-item .card .link-img {
+.link-img {
   transition: all 0.2s ease-in-out;
 }
 
-.portfolio-item .card .link-img:hover {
+.link-img:hover {
   opacity: 0.7;
 }
 
-.portfolio-item .card .card-body {
+.card-body {
   padding: 1.5rem 1.5rem 0;
 }
 
-.portfolio-item .card .card-footer {
+.card-footer {
   padding: 0.75rem 1.5rem 1.5rem;
   border: 0;
   background: 0 0;
 }
 
-.btn-tertiary, .btn-tertiary:focus {
+.btn-tertiary {
+  font-size: 11px;
+  font-weight: bold;
+  border: 0;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1);
+  color: #343a40;
+  background-color: #fff;
   transition: all 0.15s ease-in-out;
 }
 
@@ -230,11 +231,7 @@ hr {
   background-color: #ececec;
 }
 
-.portfolio-item .card .card-footer .btn-tertiary {
-  font-size: 11px;
-}
-
-.portfolio-item .card .card-footer i {
+.card-footer i {
   margin-right: 3px;
 }
 
@@ -242,6 +239,14 @@ hr {
 
 #recursos {
   padding-bottom: 30px;
+}
+
+.divider-secondary {
+  max-width: 50%;
+}
+
+#recursos h4 {
+  font-weight: normal;
 }
 
 .list-tags li {

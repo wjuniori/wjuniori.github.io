@@ -22,7 +22,7 @@ var htmlFile = ['./public/assets/*.html'];
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
-  
+
   // Bootstrap
   gulp.src([
     './node_modules/bootstrap/dist/**/*',
@@ -65,10 +65,10 @@ gulp.task('video', function() {
 // Minify HTML
 gulp.task('html:minify', function() {
   return gulp.src(htmlFile)
-  .pipe(htmlMin({
-    collapseWhitespace:true
-  }))
-  .on("error", notify.onError("Error: <%= error.message %>"))
+  // .pipe(htmlMin({
+  //   collapseWhitespace:true
+  // }))
+  // .on("error", notify.onError("Error: <%= error.message %>"))
   .pipe(gulp.dest('./'))
   .pipe(browserSync.stream());
 });
